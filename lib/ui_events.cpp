@@ -7,6 +7,8 @@
 #include "PluggableUSBHID.h"
 #include "USBKeyboard.h"
 
+USBKeyboard Keyboard;
+
 
 void Onbutton(lv_event_t * e)
 {
@@ -18,8 +20,9 @@ void Offbutton(lv_event_t * e)
 	// Your code here
 }
 
-void RecordControl(lv_event_t * e)
+void Trymeany(lv_event_t * e)
 {
-
-
+	Keyboard.key_code(KEY_CAPS_LOCK);
 }
+
+

@@ -12,7 +12,7 @@ extern "C" {
 
 void Onbutton(lv_event_t * e);
 void Offbutton(lv_event_t * e);
-void RecordControl(lv_event_t * e);
+void Trymeany(lv_event_t * e);
 
 #ifdef __cplusplus
 } /*extern "C"*/

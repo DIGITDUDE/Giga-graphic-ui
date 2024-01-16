@@ -4,7 +4,6 @@
 #include "lvgl.h"
 #include "ui.h"
 
-
 Arduino_H7_Video          Display(800, 480, GigaDisplayShield); 
 Arduino_GigaDisplayTouch  Touch;
 
