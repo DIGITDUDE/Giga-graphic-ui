@@ -49,14 +49,36 @@ void ui_Screen2_screen_init(void)
     lv_obj_set_height(ui_PlusLightButton, 80);
     lv_obj_set_align(ui_PlusLightButton, LV_ALIGN_CENTER);
 
-    ui_Panel3 = ui_Sidebar_create(ui_Screen2);
-    lv_obj_set_x(ui_Panel3, -340);
-    lv_obj_set_y(ui_Panel3, 0);
+    ui_Panel6 = lv_obj_create(ui_Screen2);
+    lv_obj_set_width(ui_Panel6, 100);
+    lv_obj_set_height(ui_Panel6, 400);
+    lv_obj_set_x(ui_Panel6, -340);
+    lv_obj_set_y(ui_Panel6, 0);
+    lv_obj_set_align(ui_Panel6, LV_ALIGN_CENTER);
+    lv_obj_set_flex_flow(ui_Panel6, LV_FLEX_FLOW_COLUMN);
+    lv_obj_set_flex_align(ui_Panel6, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
+    lv_obj_clear_flag(ui_Panel6, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
+    ui_macroscreenButton2 = lv_imgbtn_create(ui_Panel6);
+    lv_imgbtn_set_src(ui_macroscreenButton2, LV_IMGBTN_STATE_RELEASED, NULL, &ui_img_1080249043, NULL);
+    lv_obj_set_width(ui_macroscreenButton2, 80);
+    lv_obj_set_height(ui_macroscreenButton2, 80);
+    lv_obj_set_x(ui_macroscreenButton2, 12);
+    lv_obj_set_y(ui_macroscreenButton2, -81);
+    lv_obj_set_align(ui_macroscreenButton2, LV_ALIGN_CENTER);
 
+    ui_lightscreenButton2 = lv_imgbtn_create(ui_Panel6);
+    lv_imgbtn_set_src(ui_lightscreenButton2, LV_IMGBTN_STATE_RELEASED, NULL, &ui_img_1704086984, NULL);
+    lv_obj_set_width(ui_lightscreenButton2, 80);
+    lv_obj_set_height(ui_lightscreenButton2, 80);
+    lv_obj_set_x(ui_lightscreenButton2, -1706);
+    lv_obj_set_y(ui_lightscreenButton2, -14);
+    lv_obj_set_align(ui_lightscreenButton2, LV_ALIGN_CENTER);
 
     lv_obj_add_event_cb(ui_MinusBrightnessButton, ui_event_MinusBrightnessButton, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_SwitchLightButton, ui_event_SwitchLightButton, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_PlusLightButton, ui_event_PlusLightButton, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_macroscreenButton2, ui_event_macroscreenButton2, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_lightscreenButton2, ui_event_lightscreenButton2, LV_EVENT_ALL, NULL);
 
 }

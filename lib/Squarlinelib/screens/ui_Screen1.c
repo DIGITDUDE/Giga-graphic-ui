@@ -43,14 +43,36 @@ void ui_Screen1_screen_init(void)
     lv_obj_set_y(ui_AmdsidebarButton, -71);
     lv_obj_set_align(ui_AmdsidebarButton, LV_ALIGN_CENTER);
 
-    ui_Panel4 = ui_Sidebar_create(ui_Screen1);
-    lv_obj_set_x(ui_Panel4, -340);
-    lv_obj_set_y(ui_Panel4, 0);
+    ui_Panel3 = lv_obj_create(ui_Screen1);
+    lv_obj_set_width(ui_Panel3, 100);
+    lv_obj_set_height(ui_Panel3, 400);
+    lv_obj_set_x(ui_Panel3, -340);
+    lv_obj_set_y(ui_Panel3, 0);
+    lv_obj_set_align(ui_Panel3, LV_ALIGN_CENTER);
+    lv_obj_set_flex_flow(ui_Panel3, LV_FLEX_FLOW_COLUMN);
+    lv_obj_set_flex_align(ui_Panel3, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
+    lv_obj_clear_flag(ui_Panel3, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
+    ui_macroscreenButton1 = lv_imgbtn_create(ui_Panel3);
+    lv_imgbtn_set_src(ui_macroscreenButton1, LV_IMGBTN_STATE_RELEASED, NULL, &ui_img_1080249043, NULL);
+    lv_obj_set_width(ui_macroscreenButton1, 80);
+    lv_obj_set_height(ui_macroscreenButton1, 80);
+    lv_obj_set_x(ui_macroscreenButton1, 12);
+    lv_obj_set_y(ui_macroscreenButton1, -81);
+    lv_obj_set_align(ui_macroscreenButton1, LV_ALIGN_CENTER);
 
+    ui_lightscreenButton1 = lv_imgbtn_create(ui_Panel3);
+    lv_imgbtn_set_src(ui_lightscreenButton1, LV_IMGBTN_STATE_RELEASED, NULL, &ui_img_1704086984, NULL);
+    lv_obj_set_width(ui_lightscreenButton1, 80);
+    lv_obj_set_height(ui_lightscreenButton1, 80);
+    lv_obj_set_x(ui_lightscreenButton1, -1706);
+    lv_obj_set_y(ui_lightscreenButton1, -14);
+    lv_obj_set_align(ui_lightscreenButton1, LV_ALIGN_CENTER);
 
     lv_obj_add_event_cb(ui_ScreenCapture, ui_event_ScreenCapture, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_ScreenRecordButton, ui_event_ScreenRecordButton, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_AmdsidebarButton, ui_event_AmdsidebarButton, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_macroscreenButton1, ui_event_macroscreenButton1, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_lightscreenButton1, ui_event_lightscreenButton1, LV_EVENT_ALL, NULL);
 
 }

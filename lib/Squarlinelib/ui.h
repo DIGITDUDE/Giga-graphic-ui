@@ -36,7 +36,11 @@ void ui_event_ScreenRecordButton(lv_event_t * e);
 extern lv_obj_t * ui_ScreenRecordButton;
 void ui_event_AmdsidebarButton(lv_event_t * e);
 extern lv_obj_t * ui_AmdsidebarButton;
-extern lv_obj_t * ui_Panel4;
+extern lv_obj_t * ui_Panel3;
+void ui_event_macroscreenButton1(lv_event_t * e);
+extern lv_obj_t * ui_macroscreenButton1;
+void ui_event_lightscreenButton1(lv_event_t * e);
+extern lv_obj_t * ui_lightscreenButton1;
 // SCREEN: ui_Screen2
 void ui_Screen2_screen_init(void);
 extern lv_obj_t * ui_Screen2;
@@ -48,7 +52,11 @@ void ui_event_SwitchLightButton(lv_event_t * e);
 extern lv_obj_t * ui_SwitchLightButton;
 void ui_event_PlusLightButton(lv_event_t * e);
 extern lv_obj_t * ui_PlusLightButton;
-extern lv_obj_t * ui_Panel3;
+extern lv_obj_t * ui_Panel6;
+void ui_event_macroscreenButton2(lv_event_t * e);
+extern lv_obj_t * ui_macroscreenButton2;
+void ui_event_lightscreenButton2(lv_event_t * e);
+extern lv_obj_t * ui_lightscreenButton2;
 extern lv_obj_t * ui____initial_actions0;
 
 LV_IMG_DECLARE(ui_img_screenshot_png);    // assets\screenshot.png

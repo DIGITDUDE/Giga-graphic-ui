@@ -19,7 +19,11 @@ void ui_event_ScreenRecordButton(lv_event_t * e);
 lv_obj_t * ui_ScreenRecordButton;
 void ui_event_AmdsidebarButton(lv_event_t * e);
 lv_obj_t * ui_AmdsidebarButton;
-lv_obj_t * ui_Panel4;
+lv_obj_t * ui_Panel3;
+void ui_event_macroscreenButton1(lv_event_t * e);
+lv_obj_t * ui_macroscreenButton1;
+void ui_event_lightscreenButton1(lv_event_t * e);
+lv_obj_t * ui_lightscreenButton1;
 
 
 // SCREEN: ui_Screen2
@@ -33,7 +37,11 @@ void ui_event_SwitchLightButton(lv_event_t * e);
 lv_obj_t * ui_SwitchLightButton;
 void ui_event_PlusLightButton(lv_event_t * e);
 lv_obj_t * ui_PlusLightButton;
-lv_obj_t * ui_Panel3;
+lv_obj_t * ui_Panel6;
+void ui_event_macroscreenButton2(lv_event_t * e);
+lv_obj_t * ui_macroscreenButton2;
+void ui_event_lightscreenButton2(lv_event_t * e);
+lv_obj_t * ui_lightscreenButton2;
 lv_obj_t * ui____initial_actions0;
 
 ///////////////////// TEST LVGL SETTINGS ////////////////////
@@ -71,6 +79,22 @@ void ui_event_AmdsidebarButton(lv_event_t * e)
         AMDsidebar(e);
     }
 }
+void ui_event_macroscreenButton1(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_CLICKED) {
+        _ui_screen_change(&ui_Screen1, LV_SCR_LOAD_ANIM_MOVE_TOP, 500, 0, &ui_Screen1_screen_init);
+    }
+}
+void ui_event_lightscreenButton1(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_CLICKED) {
+        _ui_screen_change(&ui_Screen2, LV_SCR_LOAD_ANIM_MOVE_RIGHT, 500, 0, &ui_Screen2_screen_init);
+    }
+}
 void ui_event_MinusBrightnessButton(lv_event_t * e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
@@ -93,6 +117,22 @@ void ui_event_PlusLightButton(lv_event_t * e)
     lv_obj_t * target = lv_event_get_target(e);
     if(event_code == LV_EVENT_CLICKED) {
         upbrightnessButton(e);
+    }
+}
+void ui_event_macroscreenButton2(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_CLICKED) {
+        _ui_screen_change(&ui_Screen1, LV_SCR_LOAD_ANIM_MOVE_TOP, 500, 0, &ui_Screen1_screen_init);
+    }
+}
+void ui_event_lightscreenButton2(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_CLICKED) {
+        _ui_screen_change(&ui_Screen2, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_Screen2_screen_init);
     }
 }
 
