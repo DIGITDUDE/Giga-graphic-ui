@@ -13,15 +13,12 @@
 void ui_Screen1_screen_init(void);
 lv_obj_t * ui_Screen1;
 lv_obj_t * ui_Panel2;
-void ui_event_On_button(lv_event_t * e);
-lv_obj_t * ui_On_button;
-lv_obj_t * ui_On_button_label;
-void ui_event_Off_button(lv_event_t * e);
-lv_obj_t * ui_Off_button;
-lv_obj_t * ui_Off_button_label;
-void ui_event_RECbutton(lv_event_t * e);
-lv_obj_t * ui_RECbutton;
-lv_obj_t * ui_Label1;
+void ui_event_ScreenCapture(lv_event_t * e);
+lv_obj_t * ui_ScreenCapture;
+void ui_event_ScreenRecordButton(lv_event_t * e);
+lv_obj_t * ui_ScreenRecordButton;
+void ui_event_AmdsidebarButton(lv_event_t * e);
+lv_obj_t * ui_AmdsidebarButton;
 lv_obj_t * ui____initial_actions0;
 
 ///////////////////// TEST LVGL SETTINGS ////////////////////
@@ -35,28 +32,28 @@ lv_obj_t * ui____initial_actions0;
 ///////////////////// ANIMATIONS ////////////////////
 
 ///////////////////// FUNCTIONS ////////////////////
-void ui_event_On_button(lv_event_t * e)
+void ui_event_ScreenCapture(lv_event_t * e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t * target = lv_event_get_target(e);
     if(event_code == LV_EVENT_CLICKED) {
-        Onbutton(e);
+        ScreenCaptureButton(e);
     }
 }
-void ui_event_Off_button(lv_event_t * e)
+void ui_event_ScreenRecordButton(lv_event_t * e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t * target = lv_event_get_target(e);
     if(event_code == LV_EVENT_CLICKED) {
-        Offbutton(e);
+        ScreenRecord(e);
     }
 }
-void ui_event_RECbutton(lv_event_t * e)
+void ui_event_AmdsidebarButton(lv_event_t * e)
 {
     lv_event_code_t event_code = lv_event_get_code(e);
     lv_obj_t * target = lv_event_get_target(e);
     if(event_code == LV_EVENT_CLICKED) {
-        Trymeany(e);
+        AMDsidebar(e);
     }
 }
 

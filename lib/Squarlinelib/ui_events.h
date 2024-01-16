@@ -10,9 +10,9 @@
 extern "C" {
 #endif
 
-void Onbutton(lv_event_t * e);
-void Offbutton(lv_event_t * e);
-void Trymeany(lv_event_t * e);
+void ScreenCaptureButton(lv_event_t * e);
+void ScreenRecord(lv_event_t * e);
+void AMDsidebar(lv_event_t * e);
 
 #ifdef __cplusplus
 } /*extern "C"*/

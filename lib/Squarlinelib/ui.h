@@ -28,17 +28,17 @@ extern "C" {
 void ui_Screen1_screen_init(void);
 extern lv_obj_t * ui_Screen1;
 extern lv_obj_t * ui_Panel2;
-void ui_event_On_button(lv_event_t * e);
-extern lv_obj_t * ui_On_button;
-extern lv_obj_t * ui_On_button_label;
-void ui_event_Off_button(lv_event_t * e);
-extern lv_obj_t * ui_Off_button;
-extern lv_obj_t * ui_Off_button_label;
-void ui_event_RECbutton(lv_event_t * e);
-extern lv_obj_t * ui_RECbutton;
-extern lv_obj_t * ui_Label1;
+void ui_event_ScreenCapture(lv_event_t * e);
+extern lv_obj_t * ui_ScreenCapture;
+void ui_event_ScreenRecordButton(lv_event_t * e);
+extern lv_obj_t * ui_ScreenRecordButton;
+void ui_event_AmdsidebarButton(lv_event_t * e);
+extern lv_obj_t * ui_AmdsidebarButton;
 extern lv_obj_t * ui____initial_actions0;
 
+LV_IMG_DECLARE(ui_img_screenshot_png);    // assets\screenshot.png
+LV_IMG_DECLARE(ui_img_815904853);    // assets\recording (1).png
+LV_IMG_DECLARE(ui_img_577774466);    // assets\amd (1).png
 
 
 
