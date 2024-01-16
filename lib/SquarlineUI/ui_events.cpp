@@ -4,6 +4,9 @@
 // Project name: SquareLine_Project
 
 #include "ui.h"
+#include "PluggableUSBHID.h"
+#include "USBKeyboard.h"
+
 
 void Onbutton(lv_event_t * e)
 {
@@ -17,5 +20,6 @@ void Offbutton(lv_event_t * e)
 
 void RecordControl(lv_event_t * e)
 {
-	// Your code here
+
+
 }
