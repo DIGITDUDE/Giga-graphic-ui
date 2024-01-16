@@ -52,6 +52,5 @@ void ui_Screen1_screen_init(void)
     lv_obj_add_event_cb(ui_ScreenCapture, ui_event_ScreenCapture, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_ScreenRecordButton, ui_event_ScreenRecordButton, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_AmdsidebarButton, ui_event_AmdsidebarButton, LV_EVENT_ALL, NULL);
-    lv_obj_add_event_cb(ui_Screen1, ui_event_Screen1, LV_EVENT_ALL, NULL);
 
 }

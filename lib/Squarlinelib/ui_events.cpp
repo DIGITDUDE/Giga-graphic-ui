@@ -28,6 +28,25 @@ void AMDsidebar(lv_event_t * e)
 	Keyboard.key_code('a', KEY_ALT);
 }
 
+void LowerbrightnessButton(lv_event_t * e)
+{
+	// Your code here
+	Keyboard.key_code('1', KEY_CTRL | KEY_SHIFT);
+}
+
+
+void SwitchLightButton(lv_event_t * e)
+{
+	
+	// Your code here
+	Keyboard.key_code('L', KEY_ALT | KEY_CTRL);
+}
+
+void upbrightnessButton(lv_event_t * e)
+{
+	// Your code here
+	Keyboard.key_code('2', KEY_CTRL | KEY_SHIFT);
+}
 
 
 

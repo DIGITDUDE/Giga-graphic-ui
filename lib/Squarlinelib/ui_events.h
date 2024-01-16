@@ -10,7 +10,6 @@
 extern "C" {
 #endif
 
-void AMDButton(lv_event_t * e);
 void ScreenCaptureButton(lv_event_t * e);
 void ScreenRecord(lv_event_t * e);
 void AMDsidebar(lv_event_t * e);
