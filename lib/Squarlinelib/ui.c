@@ -37,6 +37,7 @@ void ui_event_SwitchLightButton(lv_event_t * e);
 lv_obj_t * ui_SwitchLightButton;
 void ui_event_PlusLightButton(lv_event_t * e);
 lv_obj_t * ui_PlusLightButton;
+lv_obj_t * ui_Label1;
 lv_obj_t * ui_Panel6;
 void ui_event_macroscreenButton2(lv_event_t * e);
 lv_obj_t * ui_macroscreenButton2;

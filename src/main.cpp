@@ -4,6 +4,8 @@
 #include "lvgl.h"
 #include "ui.h"
 
+int Label_val = 0;
+
 Arduino_H7_Video          Display(800, 480, GigaDisplayShield); 
 Arduino_GigaDisplayTouch  Touch;
 
@@ -11,7 +13,10 @@ void setup() {
   Display.begin();
   Touch.begin();
 
+
   ui_init();
+
+   lv_label_set_text_fmt(ui_Label1, "%d", Label_val);
 }
 
 void loop() {
